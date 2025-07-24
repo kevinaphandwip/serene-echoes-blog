@@ -2,6 +2,7 @@ import HeadlineSection from '../components/HeadlineSection';
 import Navbar from '../components/Navbar';
 import BannerSection from '../components/BannerSection';
 import BlogCardSection from '../components/BlogCardSection';
+import Link from 'next/link';
 
 import GallerySection from '@/components/GallerySection';
 
@@ -25,10 +26,10 @@ export default function Home() {
   <div className="container mx-auto px-4 text-center space-y-4">
     <p className="text-sm">© 2025 Serene Echoes. All rights reserved.</p>
     <div className="flex justify-center space-x-6 text-sm">
-      <a href="/" className="hover:underline">Home</a>
-      <a href="/blog" className="hover:underline">Blog</a>
-      <a href="/about" className="hover:underline">About</a>
-      <a href="/portfolio" className="hover:underline">Portfolio</a>
+      <Link href="/" className="hover:underline">Home</Link>
+      <Link href="/blog" className="hover:underline">Blog</Link>
+      <Link href="/about" className="hover:underline">About</Link>
+      <Link href="/portfolio" className="hover:underline">Portfolio</Link>
     </div>
   </div>
 </footer>
