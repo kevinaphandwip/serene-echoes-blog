@@ -2,7 +2,7 @@ import posts from '../data/posts';
 
 export default function Sidebar({ className = '' }) {
   return (
-<aside className={`w-full lg:w-1/3 space-y-8 ${className}`}>
+<aside className={`  space-y-8 ${className}`}>
         {/* Search */}
         <div className="relative">
           <input
@@ -17,7 +17,7 @@ export default function Sidebar({ className = '' }) {
         <div>
           <h3 className="font-francois text-gray-800 text-lg mb-2">Recent Post</h3>
           {posts.slice(0, 3).map((post) => (
-            <p key={post.id} className="text-sm underline text-gray-800">
+            <p key={post.id} className="text-xs my-1 underline text-gray-800">
               {post.title}
             </p>
           ))}
@@ -26,7 +26,7 @@ export default function Sidebar({ className = '' }) {
         {/* Categories */}
         <div>
           <h3 className="font-francois text-gray-800 text-lg mb-2">Categories</h3>
-          <ul className="text-sm space-y-1 text-gray-800">
+          <ul className="text-xs space-y-1 text-gray-800">
             <li>Fishing</li>
             <li>Tech</li>
             <li>Nature</li>

@@ -20,9 +20,19 @@ export default function BlogDetail() {
     <>
       <Navbar />
 
-      {/* Judul dan Author */}
-      <div className="max-w-5xl mx-auto px-4 pt-12 text-center">
-        <h1 className="text-5xl font-semibold text-gray-900 leading-snug">
+    
+      
+
+
+      <main className="flex flex-col lg:flex-row max-w-6xl mx-auto px-6 py-6 gap-12">
+        
+        
+        
+        {/* Artikel */}
+        <article className="lg:flex-[4] space-y-8">
+
+        <div className="max-w-6xl mx-auto px-4 text-center">
+        <h1 className="text-4xl font-semibold text-gray-900 leading-snug">
           {post.title}
         </h1>
         <p className="text-sm text-gray-500 italic mt-2">
@@ -31,7 +41,7 @@ export default function BlogDetail() {
       </div>
 
       {/* Gambar */}
-      <div className="relative w-full max-w-4xl aspect-[3/1] mx-auto mt-8 rounded-xl overflow-hidden">
+      <div className="relative w-full max-w-6xl aspect-[3/1] mx-auto mt-8 rounded-xl overflow-hidden">
   <Image
     src={post.imageSrc}
     alt={post.title}
@@ -41,9 +51,6 @@ export default function BlogDetail() {
 </div>
 
 
-      <main className="max-w-5xl mx-auto px-8 py-12 flex flex-col lg:flex-row gap-12">
-        {/* Artikel */}
-        <article className="flex-1 space-y-8">
           {/* Isi artikel */}
           <div className="prose prose-lg max-w-none text-justify text-gray-800 leading-relaxed">
             {post.content?.split('\n').map((paragraph, i) => (
@@ -66,6 +73,10 @@ export default function BlogDetail() {
             </div>
           </div>
         </article>
+
+        <div className="lg:flex-[1]">
+          <Sidebar/>
+        </div>
 
        
         

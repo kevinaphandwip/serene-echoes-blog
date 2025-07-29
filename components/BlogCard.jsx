@@ -10,7 +10,7 @@ function truncateText(text, maxLength) {
 
 export default function BlogCard({ id,title, excerpt, category, imageSrc }) {
   return (
-    <div className="flex flex-col md:flex-row border-b py-6 gap-4">
+    <div className="flex flex-col md:flex-row border-b pb-4 gap-4">
       {/* Gambar */}
       <div className="w-full md:w-[264px] flex-shrink-0">
         <Image

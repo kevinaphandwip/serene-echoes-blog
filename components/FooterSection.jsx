@@ -1,6 +1,7 @@
 import Link from 'next/link';
 export default function FooterSection() {
 return (
+    
 <footer className="bg-darkcustom text-white py-8">
   <div className="container mx-auto px-4 text-center space-y-4">
     <p className="text-sm">© 2025 Serene Echoes. All rights reserved.</p>

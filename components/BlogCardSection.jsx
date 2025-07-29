@@ -18,7 +18,7 @@ export default function BlogCardSection() {
   return (
     <div className="max-w-6xl bg-white mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
       {/* Kiri: Blog List */}
-      <div className="flex-1">
+      <div className="flex-[4] space-y-8 ">
         {currentPosts.map((post) => (
           <BlogCard key={post.id} {...post} />
         ))}
@@ -31,7 +31,7 @@ export default function BlogCardSection() {
       </div>
 
       {/* Kanan: Sidebar */}
-      <Sidebar posts={posts} />
+      <Sidebar posts={posts} className='lg:flex-[1]'/>
     </div>
   );
 }
