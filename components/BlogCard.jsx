@@ -27,7 +27,7 @@ export default function BlogCard({ id,title, excerpt, category, imageSrc }) {
         <div>
           <h2 className="text-xl text-gray-800 font-francois">{title}</h2>
           <p className="text-xs text-gray-600 mt-2">{truncateText(excerpt, 300)}</p>
-          <p className="mt-2 font-semibold text-sm">{category}</p>
+          <p className="mt-2 font-semibold text-sm text-gray-800">{category}</p>
         </div>
 
         {/* Tombol panah */}
@@ -35,7 +35,7 @@ export default function BlogCard({ id,title, excerpt, category, imageSrc }) {
   href={`/blog/${id}`}
   className="absolute bottom-0 right-0 p-2 rounded-full hover:bg-gray-200 transition"
 >
-  <ArrowRight size={20} />
+  <ArrowRight size={20} className="text-gray-800" />
 </Link>
 
       </div>
