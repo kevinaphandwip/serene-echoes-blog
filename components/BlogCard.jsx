@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link'; 
 
 function truncateText(text, maxLength) {
   if (!text) return "";
@@ -7,7 +8,7 @@ function truncateText(text, maxLength) {
 }
 
 
-export default function BlogCard({ title, excerpt, category, imageSrc }) {
+export default function BlogCard({ id,title, excerpt, category, imageSrc }) {
   return (
     <div className="flex flex-col md:flex-row border-b py-6 gap-4">
       {/* Gambar */}
@@ -30,9 +31,13 @@ export default function BlogCard({ title, excerpt, category, imageSrc }) {
         </div>
 
         {/* Tombol panah */}
-        <button className="absolute bottom-0 right-0 p-2 rounded-full hover:bg-gray-200 transition">
-          <ArrowRight size={20} />
-        </button>
+        <Link
+  href={`/blog/${id}`}
+  className="absolute bottom-0 right-0 p-2 rounded-full hover:bg-gray-200 transition"
+>
+  <ArrowRight size={20} />
+</Link>
+
       </div>
     </div>
   );
