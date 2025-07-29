@@ -32,7 +32,7 @@ export default function BlogCardSection() {
   const currentPosts = posts.slice(startIndex, startIndex + postsPerPage);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+    <div className="max-w-6xl bg-white mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
       {/* Kiri: Blog List */}
       <div className="flex-1">
         {currentPosts.map((post) => (
