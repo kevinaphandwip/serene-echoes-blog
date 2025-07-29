@@ -1,7 +1,7 @@
 export default function BannerSection() {
   return (
      <section
-      className="relative w-full h-screen bg-cover bg-center"
+      className="relative w-full h-[60vh] sm:h-[80vh] md:h-screen bg-cover bg-center"
       style={{ backgroundImage: 'url("../assets/banner.jpg")' }}
     >
       {/* Content container */}
