@@ -17,7 +17,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-2">
                 <img src="/assets/logo.svg" alt="Logo" className="w-8 h-8" />
 
-                <span className="font-francois text-gray-800 text-lg">SERENE ECHOES</span>
+                <span className="font-francois text-gray-800 text-lg">STILL BLOOM</span>
             </div>
             {/* End Logo area */}
 
