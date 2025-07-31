@@ -4,9 +4,9 @@ import { useState } from 'react';
 import BlogCard from './BlogCard';
 import Pagination from './Pagination';
 import Sidebar from './Sidebar';
-import posts from '../data/posts';
 
-export default function BlogCardSection() {
+
+export default function BlogCardSection({posts}) {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 10;
 
@@ -20,8 +20,16 @@ export default function BlogCardSection() {
       {/* Kiri: Blog List */}
       <div className="flex-[4] space-y-8 ">
         {currentPosts.map((post) => (
-          <BlogCard key={post.id} {...post} />
-        ))}
+  <BlogCard
+    key={post.id}
+    id={post.slug}
+    title={post.title}
+    excerpt={post.excerpt.replace(/<[^>]+>/g, '')} // hilangkan tag HTML
+    category={post.categories?.nodes?.[0]?.name || 'Uncategorized'}
+    imageSrc={post.featuredImage?.node?.sourceUrl || '/placeholder.jpg'}
+  />
+))}
+
 
         <Pagination
           currentPage={currentPage}

@@ -1,6 +1,10 @@
-import posts from '../data/posts';
 
-export default function Sidebar({ className = '' }) {
+
+export default function Sidebar({ posts = [], className = '' }) {
+ const uniqueCategories = Array.from(
+    new Set(posts.map((post) => post.category).filter(Boolean))
+  );
+
   return (
 <aside className={`  space-y-8 ${className}`}>
         {/* Search */}
@@ -27,10 +31,10 @@ export default function Sidebar({ className = '' }) {
         <div>
           <h3 className="font-francois text-gray-800 text-lg mb-2">Categories</h3>
           <ul className="text-xs space-y-1 text-gray-800">
-            <li>Fishing</li>
-            <li>Tech</li>
-            <li>Nature</li>
-          </ul>
+          {uniqueCategories.map((category) => (
+            <li key={category}>{category}</li>
+          ))}
+        </ul>
         </div>
       </aside>
     );
