@@ -2,7 +2,7 @@
 import { getAllPosts } from '@/lib/getPosts';
 import HomePage from '@/components/HomePage';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const posts = await getAllPosts();
 
   return {
