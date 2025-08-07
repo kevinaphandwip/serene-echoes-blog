@@ -14,13 +14,14 @@ export default function Navbar() {
         <nav className="w-full flex items-center justify-between py-4 px-10 bg-white border-b-1 border-neutral-200 z-99">
 
             {/* Logo area */}
+            <Link href="/">
             <div className="flex items-center space-x-2">
                 <img src="/assets/logo.svg" alt="Logo" className="w-8 h-8" />
 
                 <span className="font-francois text-gray-800 text-lg">STILL BLOOM</span>
             </div>
             {/* End Logo area */}
-
+            </Link>
 
             {/* Hamburger button */}
             <button
@@ -45,21 +46,7 @@ export default function Navbar() {
                         Home
                     </Link>
                 </li>
-                <li>
-                    <Link href="/blog" className="">
-                        Blog
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/about" className="">
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/portofolio" className="">
-                        Portofolio
-                    </Link>
-                </li>
+                
             </ul>
 
 

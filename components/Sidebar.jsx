@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 
 export default function Sidebar({ posts = [], className = '' }) {
  const uniqueCategories = Array.from(
@@ -21,9 +21,12 @@ export default function Sidebar({ posts = [], className = '' }) {
         <div>
           <h3 className="font-francois text-gray-800 text-lg mb-2">Recent Post</h3>
           {posts.slice(0, 3).map((post) => (
+            <Link key={post.id} href={`/blog/${post.slug}`}>
             <p key={post.id} className="text-xs my-1 underline text-gray-800">
               {post.title}
             </p>
+            </Link>
+            
           ))}
         </div>
 

@@ -55,20 +55,24 @@ export default function BlogDetail({ post }) {
           />
 
           <div className="flex gap-4 pt-8 border-t mt-12">
-            <Image
-              src="/assets/avatar.png"
-              alt="Author Avatar"
-              width={75}
-              height={75}
-              className="rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-gray-800">Kevin Naphan Dwiputra</p>
-              <p className="text-sm text-gray-800">
-                Finding calm through words and visuals
-              </p>
-            </div>
-          </div>
+  <Image
+    src={post.author?.node?.avatar?.url || "/assets/avatar.png"}
+    alt={post.author?.node?.name || "Author Avatar"}
+    width={75}
+    height={75}
+    className="rounded-full object-cover"
+  />
+  <div>
+    <p className="font-semibold text-gray-800">
+      {post.author?.node?.name || "Unknown Author"}
+    </p>
+    <p className="text-sm text-gray-800">
+      {post.author?.node?.description || "No bio available."}
+    </p>
+  </div>
+</div>
+
+
         </article>
 
         <div className="lg:flex-[1]">
